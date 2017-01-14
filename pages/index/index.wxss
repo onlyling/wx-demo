@@ -1,0 +1,39 @@
+.index-time {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 60px;
+  padding-left: 20px;
+  color: #b2b2b2;
+}
+
+.index-ul-item {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.index-ul-item.active{
+    background-color: #f1f1f1;
+}
+
+.index-ul-item .img-box {
+  height: 60px;
+  width: 60px;
+  flex-basis: 60px;
+}
+
+.index-ul-item .img-box .img {
+  height: 60px;
+  width: 60px;
+}
+
+.index-ul-item .title {
+  flex-basis: 100%;
+  line-height: 30px;
+}
+
+.index-more{
+    margin: 10px 20px;
+}

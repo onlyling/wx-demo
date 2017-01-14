@@ -1,0 +1,10 @@
+<view class="wx-page">
+
+    <view class="news-title" style="background-image: url('http://ac-dpefsmm4.clouddn.com/f3c1956fd2c17e0a1e47.jpg');">
+        <text class="title">{{title}}</text>
+        <text class="time">{{time}}</text>
+    </view>
+
+    <view>{{content}}</view>
+
+</view>

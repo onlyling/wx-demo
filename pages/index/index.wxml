@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<template name="indexNews">
+
+  <text class="index-time">{{today}}</text>
+  <view class="index-ul-item" wx:for="{{list}}" hover="{{true}}" hover-class="active">
+
+    <text
+      class="title"
+      data-id="{{item.id}}"
+      data-title="{{item.title}}"
+      data-time="{{today}}"
+      bindtap="goToNews"
+      >{{item.title}}</text>
+
+    <view class="img-box">
+
+      <image
+        class="img"
+        mode="center"
+        src="https://ac-dpeFsmm4.clouddn.com/dcc1dedffa8d73e6f5c2.jpg"
+        ></image>
+
+    </view>
+  </view>
+
+</template>
+<view class="wx-page">
+  <block wx:for="{{todays}}" wx:for-item="obj">
+    <template is="indexNews" data="{{...obj}}"></template>
+  </block>
+  <button class="index-more" type="primary" loading="{{loading}}" bindtap="getMore">更多</button>
+</view>
