@@ -106,7 +106,7 @@ js部门，还是原来的配方，还是熟悉的味道，由于个人长期写
 
 ## 数据接口
 
-详情请点击查看(ZhihuDailyPurify - 知乎日报 API 分析)[https://github.com/izzyleung/ZhihuDailyPurify/wiki/知乎日报-API-分析]
+详情请点击查看[ZhihuDailyPurify - 知乎日报 API 分析](https://github.com/izzyleung/ZhihuDailyPurify/wiki/知乎日报-API-分析)
 
 ## 疑惑
 
