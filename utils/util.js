@@ -19,35 +19,43 @@ function formatNumber(n) {
 }
 
 const _getUrl = (route) => {
-    return `https://${_config.host}${_config.basePath}${route}`
+  return `https://${_config.host}${_config.basePath}${route}`
 }
 
-export const $ajax = (url, data) => {
+export const $ajax = (opt) => {
 
 
-    return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
 
-        wx.request({
-            url: _getUrl(url), //仅为示例，并非真实的接口地址
-            data,
-            header: {
-                'content-type': 'application/json'
-            },
-            success: function (res) {
-              if(res.statusCode === 200){
-                resolve(res.data)
-              }else{
-                reject(res.errMsg)
-              }
-            }
-        })
-
+    wx.request({
+      url: _getUrl(opt.url),
+      type: opt.type || 'GET',
+      data: opt.data,
+      dataType: opt.dataType || 'json',
+      header: opt.header || {
+        'content-type': 'application/json'
+      },
+      success(res) {
+        if (res.statusCode === 200) {
+          resolve(res.data)
+        } else {
+          reject(res.errMsg)
+        }
+      },
+      fail(err) {
+        reject(err)
+      }
     })
+
+  })
 
 }
 
 export const $get = (url, data) => {
-    return $ajax(url, data)
+  return $ajax({
+    url,
+    data
+  })
 }
 
 export const getDayTime = (() => {

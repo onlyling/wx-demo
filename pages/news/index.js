@@ -1,3 +1,14 @@
+/**
+ * 新闻详情页
+ * 
+ * WxParse
+ * wxParse-微信小程序富文本解析自定义组件，支持HTML及markdown解析
+ * 
+ * https://github.com/icindy/wxParse
+ * 
+ */
+
+var WxParse = require('../../wxParse/wxParse.js')
 
 var _util = require('../../utils/util.js')
 
@@ -23,9 +34,11 @@ Page({
 
             console.log(res)
 
-            self.setData({
-                content: res.body
-            })
+            WxParse.wxParse('article', 'html', res.body, self,5);
+
+            // self.setData({
+            //     content: res.body
+            // })
 
         })
 

@@ -1,4 +1,7 @@
+@import "/wxParse/wxParse.wxss";
+
 /**app.wxss**/
+
 .page {
   height: 100%;
   display: flex;
